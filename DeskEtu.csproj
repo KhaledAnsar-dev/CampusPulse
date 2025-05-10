@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E2C65B4-4D4C-4529-89B9-97640609FDF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DeskEtu</RootNamespace>
+    <AssemblyName>DeskEtu</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additional\LastRecordsNumbers.cs" />
+    <Compile Include="Additional\clsStructs.cs" />
+    <Compile Include="Core\clsCohort.cs" />
+    <Compile Include="Core\clsCourse.cs" />
+    <Compile Include="Core\clsEmployee.cs" />
+    <Compile Include="Core\clsEnrollment.cs" />
+    <Compile Include="Core\clsGroup.cs" />
+    <Compile Include="Core\clsMentors.cs" />
+    <Compile Include="Core\clsSession.cs" />
+    <Compile Include="Core\clsStudent.cs" />
+    <Compile Include="Core\clsTeaching.cs" />
+    <Compile Include="Core\clsPerson.cs" />
+    <Compile Include="Libraries\clsInputValidate.cs" />
+    <Compile Include="Project Screens\Employees Screens\List Screen\EmployeesScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Employees Screens\List Screen\EmployeesScreen.Designer.cs">
+      <DependentUpon>EmployeesScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Employees Screens\Manipulation Screens\ReformEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Employees Screens\Manipulation Screens\ReformEmployees.Designer.cs">
+      <DependentUpon>ReformEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Enrollments Screens\Manipulation Screens\ReformEnrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Enrollments Screens\Manipulation Screens\ReformEnrollment.Designer.cs">
+      <DependentUpon>ReformEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Sessions\Manipulation Screens\ReformSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Sessions\Manipulation Screens\ReformSessions.Designer.cs">
+      <DependentUpon>ReformSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\List Screens\CohortsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\List Screens\CohortsScreen.Designer.cs">
+      <DependentUpon>CohortsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Enrollments Screens\List Screens\EnrollmentsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Enrollments Screens\List Screens\EnrollmentsScreen.Designer.cs">
+      <DependentUpon>EnrollmentsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\List Screens\GroupsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\List Screens\GroupsScreen.Designer.cs">
+      <DependentUpon>GroupsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\ImageActivator.cs" />
+    <Compile Include="Project Screens\ListScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\ListScreen.Designer.cs">
+      <DependentUpon>ListScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\Manipulation Screens\ReformCohorts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\Manipulation Screens\ReformCohorts.Designer.cs">
+      <DependentUpon>ReformCohorts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\Manipulation Screens\ReformGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Structure Screens\Manipulation Screens\ReformGroups.Designer.cs">
+      <DependentUpon>ReformGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Teachings Screens\List Screens\CoursesScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Teachings Screens\List Screens\CoursesScreen.Designer.cs">
+      <DependentUpon>CoursesScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Teachings Screens\List Screens\Mentors Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Teachings Screens\List Screens\Mentors Screen.Designer.cs">
+      <DependentUpon>Mentors Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\NavigationManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Project Screens\Teachings Screens\Manipulation Screens\ReformTeachings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Teachings Screens\Manipulation Screens\ReformTeachings.Designer.cs">
+      <DependentUpon>ReformTeachings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Project Screens\Sessions\List Screen\Sessions Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Sessions\List Screen\Sessions Screen.Designer.cs">
+      <DependentUpon>Sessions Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\StyleManager.cs" />
+    <Compile Include="Project Screens\Enrollments Screens\List Screens\StudentsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Enrollments Screens\List Screens\StudentsScreen.Designer.cs">
+      <DependentUpon>StudentsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\Teachings Screens\List Screens\TeachingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\Teachings Screens\List Screens\TeachingScreen.Designer.cs">
+      <DependentUpon>TeachingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project Screens\ReformScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project Screens\ReformScreen.Designer.cs">
+      <DependentUpon>ReformScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Project Screens\Employees Screens\List Screen\EmployeesScreen.resx">
+      <DependentUpon>EmployeesScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Employees Screens\Manipulation Screens\ReformEmployees.resx">
+      <DependentUpon>ReformEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Enrollments Screens\List Screens\EnrollmentsScreen.resx">
+      <DependentUpon>EnrollmentsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\ListScreen.resx">
+      <DependentUpon>ListScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Enrollments Screens\Manipulation Screens\ReformEnrollment.resx">
+      <DependentUpon>ReformEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Sessions\List Screen\Sessions Screen.resx">
+      <DependentUpon>Sessions Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Sessions\Manipulation Screens\ReformSessions.resx">
+      <DependentUpon>ReformSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Structure Screens\List Screens\CohortsScreen.resx">
+      <DependentUpon>CohortsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Structure Screens\List Screens\GroupsScreen.resx">
+      <DependentUpon>GroupsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Structure Screens\Manipulation Screens\ReformCohorts.resx">
+      <DependentUpon>ReformCohorts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Structure Screens\Manipulation Screens\ReformGroups.resx">
+      <DependentUpon>ReformGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Teachings Screens\List Screens\CoursesScreen.resx">
+      <DependentUpon>CoursesScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Teachings Screens\List Screens\Mentors Screen.resx">
+      <DependentUpon>Mentors Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Teachings Screens\List Screens\TeachingScreen.resx">
+      <DependentUpon>TeachingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\Teachings Screens\Manipulation Screens\ReformTeachings.resx">
+      <DependentUpon>ReformTeachings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Project Screens\Enrollments Screens\List Screens\StudentsScreen.resx">
+      <DependentUpon>StudentsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project Screens\ReformScreen.resx">
+      <DependentUpon>ReformScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Input 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginTicket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enrollment 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enrolmment 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Session 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Session1 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Structure 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Structure1 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teaching 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teaching 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Employees 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Employees 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Enrollments 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Enrollments 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Sessions 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Sessions 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Structre 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Structre 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Teaching 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Teaching 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search bar 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search bar 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\U-D 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\U-D 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reform_Cohorts_Teaching_Tk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add for delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go back 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go back 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Employees 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Enrollments 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Sessions 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Structre 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QA_Teaching 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reform_Enrollments_Tk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reform_Groups_Tk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reform_Sessions_Employees_Tk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseAll 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseAll 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserName 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CP copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CP 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
